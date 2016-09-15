@@ -1,4 +1,4 @@
-public class firstProg
+public class Lab01part1
 {
 	public static void main(String[]arqs)
 	{
