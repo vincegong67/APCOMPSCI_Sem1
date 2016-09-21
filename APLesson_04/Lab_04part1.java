@@ -25,8 +25,9 @@ public class Lab_04part1
 		System.out.println("Please enter the price:");
 		double item6= kb.nextDouble();
 		
-		double subtotal= (item2 + item3 + item4);
-		double tax= (item2 +item3 +item4)* 0.075;
+		double number= 0.075;
+		double subtotal= (item2 + item4 + item6);
+		double tax= (item2 +item4 +item6)* number;
 		double total= (tax+subtotal);
 		
 		
@@ -40,6 +41,8 @@ public class Lab_04part1
 		form.format("Subtotal", subtotal);
 		form.format("Tax", tax);
 		form.format("Total", total);
+		System.out.println("\n__________________________________________");
+		System.out.println("* Thank you for your support *");
 	
 	}
 	
