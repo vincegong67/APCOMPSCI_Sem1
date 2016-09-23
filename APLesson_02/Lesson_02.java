@@ -14,11 +14,14 @@ public class Lesson_02
 			
 			System.out.println("=====> Exercise_02");
 			int q = 12457;
-			String w = "Carmel Park Drive";
-			String e = "San Diego";
+			String w = " Carmel Park Drive ";
+			String e = "San Diego ";
+			String d = "California ";
 			int r = 92130;
 			String Address= q+w+e+r;
-			System.out.println("Your Address is " + Address);
+			System.out.println("Vince Gong");
+			System.out.println(q+w);
+			System.out.println(e+d+r);
 			System.out.println("");
 			System.out.println("");
 			
