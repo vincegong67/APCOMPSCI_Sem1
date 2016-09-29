@@ -6,14 +6,15 @@ public class Lab_03part2
 	{
 		Scanner keyboard = new Scanner(System.in);
 		
-		System.out.println("What is your Weight?");
+		System.out.println("What is your Weight in Pounds?");
 		double Weight = keyboard.nextDouble();
 		
-		System.out.println("What is your Height?");
+		System.out.println("What is your Height in Inches?");
 		double Height = keyboard.nextDouble();
 		
-		double f = 703;
-		double BMI = Weight * f/(Height * Height);
+		double f = 0.45;
+		double g = 0.025;
+		double BMI = (Weight*f)/((Height*g)*(Height*g));
 		
 		System.out.println("Your BMI is " +BMI);
 	}
