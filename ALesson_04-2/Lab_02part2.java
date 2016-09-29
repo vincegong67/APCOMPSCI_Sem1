@@ -19,12 +19,17 @@ public class Lab_02part2
 		System.out.println("Please enter number 3:");		
 		num3 = kb.nextDouble();
 		average();
+		print();
 	
 	}
 	
 	public static void average()
 	{
 		avg= ((num1+num2+num3)/3);
+	}
+
+	public static void print()
+	{
 		System.out.println(var1 + num1 + " " + num2 + var2 + num3 + var3 + avg);
 	}
 }

@@ -12,13 +12,17 @@ public class Lab_02part3
 		System.out.println("Please enter cube side");		
 		side = kb.nextDouble();
 		surface();
+		print();
 	
 	}
 	
 	public static void surface()
 	{
 		surface= (side*side*6);
-		System.out.println(var1 + side +var2 + surface);
 	}
 
+	public static void print()
+	{
+		System.out.println(var1 + side +var2 + surface);
+	}
 }

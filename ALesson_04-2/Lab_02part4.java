@@ -13,12 +13,16 @@ public class Lab_02part4
 		System.out.println("Please enter radius:");		
 		radius = kb.nextDouble();
 		area();
-	
+		print();
 	}
 	
 	public static void area()
 	{
 		area= (pi*radius*radius);
+	}
+	
+	public static void print()
+	{
 		System.out.println(var1 + radius + var2 + area);
 	}
 }
