@@ -16,6 +16,6 @@ public class Lab_02part8
 	}
 	public static void print(double area, double radius)
 	{
-		System.out.println("The area of your circle with a radius of " + radius + "is " + area);
+		System.out.println("The area of your circle with a radius of " + radius + " is " + area);
 	}
 }

@@ -12,7 +12,7 @@ public class Lab_02part7
 	}
 	public static double calcSurface(int l)
 	{
-		return ((l*l)/6);
+		return ((l*l)*6);
 	}
 	public static void print(double surface, int l)
 	{
