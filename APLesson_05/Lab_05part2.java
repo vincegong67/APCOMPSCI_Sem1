@@ -10,7 +10,7 @@ public class Lab_05part2
 	static double item6;
 	static String item7;
 	static double item8;
-	static Boolean Price;
+	static boolean Price;
 	
 	static double tax;
 	static double subtotal;
@@ -57,12 +57,14 @@ public class Lab_05part2
 		int limit = 2000;
 		boolean Price = subtotal > limit;
 
-		if (Price)
+		if (Price){
 			total= ((subtotal * 0.85) * 1.08);
 			percentoff= 15;
-		if (!Price)
+		}
+		if (!Price){
 			total= (subtotal*1.08);
 			percentoff= 0;
+		}
 	}
 
 	public static void print()
