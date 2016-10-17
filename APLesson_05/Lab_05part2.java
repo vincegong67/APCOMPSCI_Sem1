@@ -21,31 +21,24 @@ public class Lab_05part2
 		
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter item 1:");
-		 item1 = kb.nextLine();
+		item1 = kb.nextLine();
 		System.out.println("Please enter the price:");
-		 item2 = kb.nextDouble();
-		
+		item2 = kb.nextDouble();
 		kb.nextLine();
-		
 		System.out.println("Please enter item 2:");
-		 item3= kb.nextLine();
+		item3= kb.nextLine();
 		System.out.println("Please enter the price:");
-		 item4= kb.nextDouble();
-		
+		item4= kb.nextDouble();
 		kb.nextLine();
-		
 		System.out.println("Please enter item 3:");
-		 item5= kb.nextLine();
+		item5= kb.nextLine();
 		System.out.println("Please enter the price:");
-		 item6= kb.nextDouble();
-		
+		item6= kb.nextDouble();
 		kb.nextLine();
-		
 		System.out.println("Please enter item 4:");
-		 item7= kb.nextLine();
+		item7= kb.nextLine();
 		System.out.println("Please enter the price:");
-		 item8= kb.nextDouble();
-
+		item8= kb.nextDouble();
 		discount();
 		tax=(0.08*subtotal);
 		print();
