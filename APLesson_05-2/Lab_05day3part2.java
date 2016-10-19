@@ -18,13 +18,13 @@ public class Lab_05day3part2
 		
 		public static void check()
 		{
-		if (USER.equalsIgnoreCase("username")&& PASS.equals("password")){
+		if (USER.equals("username")&& PASS.equals("password")){
 			System.out.println("You are granted access!");
 		}
-		else if (!(USER.equalsIgnoreCase("username"))&& PASS.equals("password")){
+		else if (!(USER.equals("username"))&& PASS.equals("password")){
 			System.out.println("Your username is incorrect!");
 		}
-		else if (USER.equalsIgnoreCase("username")&& (!PASS.equals("password"))){
+		else if (USER.equals("username")&& (!PASS.equals("password"))){
 			System.out.println("Your password is incorrect");
 			
 			}
