@@ -3,6 +3,8 @@ public class Lab_05day3part2
 {
 	static String USER;
 	static String PASS;
+	static String num1 = password
+	static String num2 = username
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
@@ -12,19 +14,19 @@ public class Lab_05day3part2
 		System.out.println("Please enter your password.");
 		PASS= kb.next();
 		
-		check();
+		passCheck();
 		
 	}
 		
-		public static void check()
+		public static void passCheck()
 		{
-		if (USER.equals("username")&& PASS.equals("password")){
+		if (USER.equals(username)&& PASS.equals(password)){
 			System.out.println("You are granted access!");
 		}
-		else if (!(USER.equals("username"))&& PASS.equals("password")){
+		else if (!(USER.equals(username))&& PASS.equals(password)){
 			System.out.println("Your username is incorrect!");
 		}
-		else if (USER.equals("username")&& (!PASS.equals("password"))){
+		else if (USER.equals(username)&& (!PASS.equals(password))){
 			System.out.println("Your password is incorrect");
 			
 			}
