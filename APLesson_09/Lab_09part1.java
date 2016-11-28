@@ -22,8 +22,7 @@ public class Lab_09part1
 		System.out.println("\nReversed ... ");
 		reverse(words);
 	}
-	public static void reverse(String[] w)
-g	
+	public static void reverse(String[] w)	
 	{
 		for(int i = w.length; i > 0; i--){
 			System.out.println(w[i-1]);
