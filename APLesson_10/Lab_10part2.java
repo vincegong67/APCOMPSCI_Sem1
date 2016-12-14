@@ -26,6 +26,24 @@ public class Lab_10part2
 				equation.remove(i-1);
 				equation.remove(i);
 			}
+			else if(i < equation.size() && equation.get(i).equals("-"))
+			{
+				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) - Integer.parseInt(equation.get(i+1))));
+				equation.remove(i-1);
+				equation.remove(i);
+			}
+			else if(i < equation.size() && equation.get(i).equals("/"))
+			{
+				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) / Integer.parseInt(equation.get(i+1))));
+				equation.remove(i-1);
+				equation.remove(i);
+			}
+			else if(i < equation.size() && equation.get(i).equals("*"))
+			{
+				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) * Integer.parseInt(equation.get(i+1))));
+				equation.remove(i-1);
+				equation.remove(i);
+			}
 			else
 				i++;
 		}
