@@ -18,11 +18,11 @@ public class Lab_11part6
 		while(!(turn.equals("Q")) && healthCount > 0)
 		{
 			System.out.println("Your turn! Hit enter when ready: ");
-			turn = kb.next().toLowerCase();
+			turn = kb.nextLine();
 			damage = 1 + (int)(Math.random() * 2);
 			amount = 1 + (int)(Math.random() * 6);
 			
-			System.out.println(takeDamage(damage,amount));
+			takeDamage(damage,amount);
 			printClip();
 		}
 		
@@ -30,37 +30,40 @@ public class Lab_11part6
 	}
 	
 	
-	public static int takeDamage(int damage, int amount)
+	public static void takeDamage(int damage, int amount)
 	{
 		if(damage == 1)
 		{
 			healthCount = healthCount-amount;
-			return "Taking [amount] damage";
+			System.out.println("Taking " + amount + " damage");
 		}
 		else if(healthCount + amount < HEALTHLOAD)
 		{
 			healthCount = amount + healthCount;
+			System.out.println("Power up " + amount + " !");
 		}
 		else
 		{
 			healthCount=HEALTHLOAD;
+			System.out.println("Power up " + amount + " !");
 		}
-		return "Power up [amount] !";
 	}
 	
 	public static void printClip()
 	{
 		String output = "Health \t";
-		for(int i = 0; i < HEALTHLOAD;i++)
+		for(int i = 0; i < HEALTHLOAD; i++){
 			if(i < healthCount)
 			{
-				health[i] = " @ ";
+				health[i] = "[]";
 			}
 			else
 			{
-				health[i] = "[]";
-				output += health[i];
+				health[i] = "* ";
 			}
+			
+			output += health[i];
+		}
 		
 		System.out.println(output);
 	}
