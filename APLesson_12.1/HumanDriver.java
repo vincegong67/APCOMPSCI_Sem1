@@ -1,8 +1,9 @@
 import java.util.Scanner;
+
 public class HumanDriver
 {
 	public static void main(String[]args)
-	{
+	{	
 		Scanner kb = new Scanner(System.in);
 		System.out.println("What is your Hair color?");
 		String Hair = kb.nextLine();
