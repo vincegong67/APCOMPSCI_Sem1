@@ -29,7 +29,7 @@ public class Lab_10part1
 	{
 		for(int i = 0; i < nums.size(); i++)
 		{
-			if(gFactor(nums.get(i)) == 1)
+			if(gFactor(nums.get(i)) != 1)
 			{
 				nums.remove(i);
 				i--;

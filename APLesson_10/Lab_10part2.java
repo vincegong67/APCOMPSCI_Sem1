@@ -20,6 +20,25 @@ public class Lab_10part2
 		int i = 0;
 		while(i < equation.size())
 		{
+			if(i < equation.size() && equation.get(i).equals("/"))
+			{
+				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) / Integer.parseInt(equation.get(i+1))));
+				equation.remove(i-1);
+				equation.remove(i);
+			}
+			else if(i < equation.size() && equation.get(i).equals("*"))
+			{
+				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) * Integer.parseInt(equation.get(i+1))));
+				equation.remove(i-1);
+				equation.remove(i);
+			}
+			else
+				i++;
+		}
+		
+		i = 0;
+		while(i < equation.size())
+		{
 			if(i < equation.size() && equation.get(i).equals("+"))
 			{
 				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) + Integer.parseInt(equation.get(i+1))));
@@ -29,18 +48,6 @@ public class Lab_10part2
 			else if(i < equation.size() && equation.get(i).equals("-"))
 			{
 				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) - Integer.parseInt(equation.get(i+1))));
-				equation.remove(i-1);
-				equation.remove(i);
-			}
-			else if(i < equation.size() && equation.get(i).equals("/"))
-			{
-				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) / Integer.parseInt(equation.get(i+1))));
-				equation.remove(i-1);
-				equation.remove(i);
-			}
-			else if(i < equation.size() && equation.get(i).equals("*"))
-			{
-				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) * Integer.parseInt(equation.get(i+1))));
 				equation.remove(i-1);
 				equation.remove(i);
 			}
