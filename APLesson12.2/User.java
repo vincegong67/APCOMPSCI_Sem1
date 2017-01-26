@@ -5,16 +5,23 @@ public class User
    private String avatar;
    private int userID;
    
-   public static void main(String[]args)
+   public User()
    {
-	   User pH = new User("Professor", "Handsome");
-	   System.out.println(pH);
-	   System.out.println();
-	   User pH2 = new User("Professor", "Handsome", "profHansizzle");
-	   System.out.println(pH2);
+	   firstName = "";
+	   lastName = "";
+	   avatar = "";
+	   userID = 0;
+   }
+	
+   public User(String fN, String lN, String av)
+   {
+		firstName = fN;
+		lastName = lN;
+		avatar = av;
+		userID = (int)(Math.random() * 1000000) + 1;
 	}
 	
-   public User(String fN, String lN)
+	 public User(String fN, String lN)
    {
 		firstName = fN;
 		lastName = lN;
@@ -22,21 +29,11 @@ public class User
 		userID = (int)(Math.random() * 1000000) + 1;
 	}
 	
-	public User(String fN, String lN, String av)
-	{
-		firstName = fN;
-		lastName = lN;
-		avatar = av;
-		userID = (int)(Math.random() * 1000000) + 1;
-	}
-	
 	public String toString()
 	{
 		return "Customer Info...\nFirst Name: " + firstName +
-                       "\nLast Name: " + lastName +
-                       "\nAvatar: " + avatar +
-                       "\nUser ID#: " + userID;
+                           "\nLast Name: " + lastName +
+                           "\nAvatar: " + avatar +
+                           "\nUser ID#: " + userID;
 	}
-	
-	
 }
