@@ -26,6 +26,8 @@ public class Lab_11part5
 		
 		printClip();
 	}
+	
+	System.out.println("Out of Bullets.");
 }
 	
 	public static void resetClip()
