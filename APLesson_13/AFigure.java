@@ -15,17 +15,6 @@ public class AFigure extends Toy
 		
 	public String getType()
 	{
-		return "AFigure";
+		return "AF";
 	}
-	
-	public String getName()
-	{
-		return name;
-	}
-		
-	public double getCount()
-	{
-		return count;
-	}
-
 }
