@@ -13,7 +13,7 @@ public class Satellite
 
         String printout = "\n\n" +
                "==========================" + "\nStarting locations...";
-
+		
         for (Location l : locate)
        {
            printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
@@ -25,7 +25,8 @@ public class Satellite
 
         for (Location l : locate)
        {
-           printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
+           double z = getDistance(l.getLoc(), home);
+		   printout += "\nDistance for " + l.getID() + ": (" + Math.round(z*100.0)/100.0 + ")";
        }
 	    printout += "\n\n" + "==========================";
 		double x, y;
@@ -37,13 +38,14 @@ public class Satellite
 		   printout += "\nAfter " + l.getID() + " Moved: (" + x + ", " + y+ ")";
 		   l.move(x,y);
 		   printout += "\nNew Location: (" + getLocation(l.getLoc()) + ")\n\n";
-	   }
+	   } 
 	   printout += "\n\n" + "==========================" +
                    "\nDistance from home...";
 
         for (Location l : locate)
        {
-           printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
+		   double z = getDistance(l.getLoc(), home);
+           printout += "\nDistance for " + l.getID() + ": (" + Math.round(z*100.0)/100.0+ ")";
        }
 
         System.out.println(printout);

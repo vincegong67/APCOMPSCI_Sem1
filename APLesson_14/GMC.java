@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class GMC implements Location
 {
 	private double xpos,ypos;
-	private int id;
 	public GMC()
 	{
 		xpos = 0;
@@ -17,9 +16,10 @@ public class GMC implements Location
 		ypos = y;
 	}
 	
-	public void setID()
+		
+	public int getID()
 	{
-		id = (int)(Math.random() * 999999) + 1;
+		return (int)(Math.random() * 999999) + 1;
 	}
 	
 	public void move(double x,double y)

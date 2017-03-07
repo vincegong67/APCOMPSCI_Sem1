@@ -24,7 +24,8 @@ public class Satellite
 
         for (Location l : locate)
        {
-           printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
+		   double z = getDistance(l.getLoc(), home);
+           printout += "\nDistance for " + l.getID() + ": (" + Math.round(z*100.0)/100.0+ ")";
        }
 
         System.out.println(printout);

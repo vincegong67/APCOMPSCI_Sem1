@@ -13,11 +13,11 @@ public class Toyota implements Location
 		move(x,y);
 	}
 	
-	public void setID()
-	{
-		id = (int)(Math.random() * 999999) + 1;
-	}
 
+	public int getID()
+	{
+		return (int)(Math.random() * 999999) + 1;
+	}
 	
 	public void move(double x,double y)
 	{
