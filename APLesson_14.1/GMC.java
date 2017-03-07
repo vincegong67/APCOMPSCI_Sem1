@@ -1,31 +1,34 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-public class GMC implements Location
+public class GMC extends Car
 {
 	private double xpos,ypos;
-	private int id;
 	public GMC()
 	{
+		super();
 		xpos = 0;
 		ypos = 0;
+		
 	}
 	
 	public GMC(double x, double y)
 	{
+		super();
 		xpos = x;
 		ypos = y;
 	}
 	
-	public void setID()
+		
+	public int getID()
 	{
-		id = (int)(Math.random() * 999999) + 1;
+		return ID;
 	}
 	
 	public void move(double x,double y)
 	{
-		xpos = x;
-		ypos = y;
+		xpos += x;
+		ypos += y;
 	}
 	
 	public double[] getLoc()

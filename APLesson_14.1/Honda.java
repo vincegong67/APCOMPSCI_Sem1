@@ -2,26 +2,26 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Honda implements Location
+public class Honda extends Car
 {
 	private double xpos,ypos;
-	private int id;
 	public Honda(double[] honLoc)
 	{
+		super();
 		xpos = honLoc[0];
 		ypos = honLoc[1];
 	}
 	
-	public void setID()
-	{
-		id = (int)(Math.random() * 999999) + 1;
-	}
 	
+	public int getID()
+	{
+		return ID;
+	}
 	
 	public void move(double x,double y)
 	{
-		xpos = x;
-		ypos = y;
+		xpos += x;
+		ypos += y;
 	}
 	
 	public double[] getLoc()
