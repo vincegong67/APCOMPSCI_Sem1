@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-public class GMC extends Car
+public class GMC implements Car
 {
 	private double xpos,ypos;
 	public GMC()

@@ -1,28 +1,21 @@
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
-public class GMC extends Car
+
+public class Honda implements Car
 {
 	private double xpos,ypos;
-	public GMC()
+	public Honda(double[] honLoc)
 	{
 		super();
-		xpos = 0;
-		ypos = 0;
-		
+		xpos = honLoc[0];
+		ypos = honLoc[1];
 	}
 	
-	public GMC(double x, double y)
-	{
-		super();
-		xpos = x;
-		ypos = y;
-	}
 	
-		
 	public int getID()
 	{
-		return  ?;
+		return ID;
 	}
 	
 	public void move(double x,double y)
@@ -33,7 +26,7 @@ public class GMC extends Car
 	
 	public double[] getLoc()
 	{
-		double location[]=new double[2];
+		double[] location = new double[2];
 		location[0] = xpos;
 		location[1] = ypos;
 		return location;
