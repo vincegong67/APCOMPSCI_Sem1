@@ -1,17 +1,19 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
-public class Toyota implements Car
+public class Toyota extends Car
 {
 	private int id;
 	private double xpos,ypos;
-	public Toyota(String pos)
+	public Toyota()
 	{
-		super();
-		ArrayList<String> position = new ArrayList<>(Arrays.asList(pos.split(", ")));
-		double x = Double.parseDouble(position.get(0));
-		double y = Double.parseDouble(position.get(1));
-		move(x,y);
+		location = new double[2];
+	}
+	
+	public Toyota(String loc)
+	{
+		location[0] = Double.parseDouble(loc.substring(0, loc.indexOf(", ")));
+		location[1] = Double.parseDouble(loc.substring(loc.indexOf(", ") + 2));
 	}
 	
 

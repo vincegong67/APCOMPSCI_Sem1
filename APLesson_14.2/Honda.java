@@ -2,14 +2,17 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Honda implements Car
+public class Honda extends Car
 {
 	private double xpos,ypos;
-	public Honda(double[] honLoc)
+	
+	public Honda()
 	{
-		super();
-		xpos = honLoc[0];
-		ypos = honLoc[1];
+		location = new double[2];
+	}
+	public Honda(double[] loc)
+	{
+		location = loc;
 	}
 	
 	

@@ -8,27 +8,9 @@ public class Satellite
        locate.add(new Honda(honLoc));
        locate.add(new Toyota("8, 9"));
        locate.add(new GMC(3, 8));
-
-        double[] home = {0, 0};
-
-        String printout = "\n\n" +
-               "==========================" + "\nStarting locations...";
-		
-        for (Location l : locate)
-       {
-           printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
-       }
-
-	   
-        printout += "\n\n" + "==========================" +
-                   "\nDistance from home...";
-
-        for (Location l : locate)
-       {
-           double z = getDistance(l.getLoc(), home);
-		   printout += "\nDistance for " + l.getID() + ": (" + Math.round(z*100.0)/100.0 + ")";
-       }
-	    printout += "\n\n" + "==========================";
+      
+	  double[] home = {0,0};
+	   String printout = "==========================";
 		double x, y;
 	   for (Location l : locate)
 	   {
