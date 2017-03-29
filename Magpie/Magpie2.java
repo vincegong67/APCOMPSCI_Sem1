@@ -55,7 +55,7 @@ public class Magpie2
 		}
 
 		// Responses which require transformations
-		else if (findKeyword(statement, "i want to", 0) >= 0)
+		else if (findKeyword(statement, "I want to", 0) >= 0)
 		{
 			response = transformIWantToStatement(statement);
 		}
@@ -95,7 +95,7 @@ public class Magpie2
 			    statement = statement.substring(0,statement.length()-1);
 		   }
 		   int psn = findKeyword(statement, "I want to");
-		  String restOfStatement = statement.substring(psn+10, statement.length());
+		  String restOfStatement = statement.substring(psn+9);
 		  return "What would it mean to" + restOfStatement + "?";
 		}
 
@@ -123,7 +123,8 @@ public class Magpie2
 	 * ========================================================= */
 	private int findKeyword(String statement, String goal, int startPos)
 	{
-		String phrase = " " + statement.toLowerCase().trim() + " ";
+		goal = goal.toLowerCase();
+		String phrase = statement.trim().toLowerCase();
 		int psn = phrase.indexOf(goal,startPos);
 		
 		while(psn >= 0)
