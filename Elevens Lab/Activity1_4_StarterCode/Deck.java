@@ -39,7 +39,10 @@ public class Deck
 			}
 		}
 		size = cards.size();
+		shuffle();
 	}
+	
+	
 
 
 	/**
@@ -50,7 +53,7 @@ public class Deck
 	{
 		return size == 0;
 	}
-
+	
 	/**
 	 * Accesses the number of undealt cards in this deck.
 	 * @return the number of undealt cards in this deck.
@@ -66,7 +69,15 @@ public class Deck
 	 */
 	public void shuffle() 
 	{
+		for(int k = cards.size()-1; k > 0; k--)
+		{
+			int r = (int)(Math.random() * (k + 1));
+			Card a = cards.get(k);
+			cards.set(k, cards.get(r));
+			cards.set(r, a);
+		}
 		
+		size = cards.size();
 	}
 
 	/**

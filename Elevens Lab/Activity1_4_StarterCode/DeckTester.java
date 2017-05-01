@@ -18,6 +18,8 @@ public class DeckTester {
 		d.deal();
 		System.out.println(d);
 		d.deal();
+		System.out.println(d);
+		d.deal();
 		
 	}
 }
