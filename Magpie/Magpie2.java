@@ -59,6 +59,19 @@ public class Magpie2
 		{
 			response = transformIWantToStatement(statement);
 		}
+		
+		if(findKeyword(statement, "i", 0) >= 0){
+			int psn = findKeyword(statement, "i", 0);
+			
+			if (psn >= 0 && findKeyword(statement, "you", psn) >= 0)
+				{
+					response = transformIYoustatement(statement);
+				}
+			else
+				{
+					response = getRandomResponse();
+				}
+		}
 
 		else
 		{
@@ -69,17 +82,6 @@ public class Magpie2
 			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0)
 				{
 					response = transformYouMeStatement(statement);
-				}
-			else
-				{
-					response = getRandomResponse();
-				}
-				
-			psn = findKeyword(statement, "I", 0);
-			
-			if (psn >= 0 && findKeyword(statement, "you", psn) >= 0)
-				{
-					response = transformIYoustatement(statement);
 				}
 			else
 				{
@@ -129,7 +131,7 @@ public class Magpie2
 		   int psnofYou = findKeyword(statement, "you");
 		   int psnofMe = findKeyword(statement, "me", psnofYou+3);
 		   String restOfStatement = statement.substring(psnofYou+3, psnofMe-1);
-		   return "What makes you think that I " + restOfStatement + "you?";
+		   return "What makes you think that I " + restOfStatement + " you?";
 		}
 		
 		private String transformIYoustatement(String statement)
